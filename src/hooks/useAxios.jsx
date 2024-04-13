@@ -18,7 +18,7 @@ const UseAxios = (param) => {
     } catch (e) {
       setError(e);
     } finally {
-      setLoading(false); // why this set to false???
+      setLoading(false); // why this set to false??? -- if result has been shown then show it may it be err or res but should not wait permanently
     }
   };
 
@@ -40,3 +40,7 @@ const UseAxios = (param) => {
 };
 
 export default UseAxios;
+
+// Both will work as export is default so we can use any name here
+// import useAxios from "../hooks/useAxios";
+// import UseAxios from "../hooks/useAxios";
